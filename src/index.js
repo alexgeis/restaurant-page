@@ -1,3 +1,4 @@
+import html from "./demo.html";
 import "./style.css";
 import print from "./otherFunction.js";
 

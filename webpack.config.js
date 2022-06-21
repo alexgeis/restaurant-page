@@ -11,11 +11,6 @@ module.exports = {
 	devServer: {
 		static: "./dist",
 	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			title: "Restaurant",
-		}),
-	],
 	output: {
 		filename: "[name].bundle.js",
 		path: path.resolve(__dirname, "dist"),
@@ -23,6 +18,10 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.html$/i,
+				loader: "html-loader",
+			},
 			{
 				test: /\.css$/i,
 				use: ["style-loader", "css-loader"],
@@ -33,6 +32,12 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: "Restaurant",
+			template: "src/demo.html",
+		}),
+	],
 	optimization: {
 		runtimeChunk: "single",
 	},
