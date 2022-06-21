@@ -8,6 +8,9 @@ module.exports = {
 		print: "./src/otherFunction.js",
 	},
 	devtool: "inline-source-map",
+	devServer: {
+		static: "./dist",
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: "Restaurant",
@@ -29,5 +32,8 @@ module.exports = {
 				type: "asset/resource",
 			},
 		],
+	},
+	optimization: {
+		runtimeChunk: "single",
 	},
 };
