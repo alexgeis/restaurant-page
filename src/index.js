@@ -8,4 +8,5 @@ function component() {
 	print();
 	return element;
 }
-document.body.appendChild(component());
+const bodyContent = document.querySelector("#content");
+bodyContent.appendChild(component());
