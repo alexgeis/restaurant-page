@@ -64,7 +64,7 @@ const headerComponent = (() => {
 
 		const imgEl = document.createElement("img");
 		imgEl.setAttribute("src", rrLogo);
-		// imgEl.setAttribute("src", "assets/rr-logo.png");
+		imgEl.setAttribute("id", "header-logo");
 		imgEl.setAttribute("alt", "Double R Diner Logo");
 
 		aEl.appendChild(imgEl);
@@ -339,21 +339,8 @@ const footerComponent = (() => {
 		);
 		questionDivEl.append(questionLabel, questionSelect);
 
-		const div3El = document.createElement("div");
-		div3El.textContent = "SCROLL";
-
-		const svgScrollEl = document.createElement("svg");
-		svgScrollEl.setAttribute("width", "24");
-		svgScrollEl.setAttribute("height", "24");
-		svgScrollEl.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-		svgScrollEl.setAttribute("fill-rule", "evenodd");
-		svgScrollEl.setAttribute("clip-rule", "evenodd");
-
-		const pathScrollEl = document.createElement("path");
-		pathScrollEl.setAttribute(
-			"d",
-			"M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"
-		);
+		divEl;
+		formEl.append(h1El, pEl, divEl);
 		//hero scroll appending
 		svgScrollEl.appendChild(pathScrollEl);
 		aEl.append(div3El, svgScrollEl);

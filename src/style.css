@@ -55,6 +55,7 @@ body {
     justify-content: flex-end;
 }
 .header-nav > a {
+    font-size: .9rem;
     padding-right: 10px;
     text-decoration: none;
     transition: all 0.5s;
@@ -80,6 +81,9 @@ div#header-nav1:hover #header-nav3 {
     font-size: 0.95rem;
 }
 
+#header-logo {
+    width: 100px;
+}
 .content-section {
     display: flex;
     justify-content: center;
