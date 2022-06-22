@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap');
 
+:root {
+    --primary-color: #CC0C0C;
+}
 
 .hello {
     color:red;
@@ -30,3 +33,27 @@ body {
     text-align: center;
     padding: 60px 0;
 }
+.header-nav {
+    padding: 1px 15px;
+}
+#headerLeft{
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+}
+#headerCenter{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#headerRight{
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+
+/* Double R Diner 
+Paddy's Irish Pub
+
+*/
