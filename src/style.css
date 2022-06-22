@@ -58,6 +58,10 @@ body {
     padding-right: 10px;
 }
 
+#hero {
+    position: relative;
+    background-color: blanchedalmond;
+}
 
 /* Double R Diner 
 Paddy's Irish Pub
