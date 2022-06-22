@@ -1,5 +1,5 @@
 //footer module
-export default footerComponent = function () {
+function footerComponent() {
 	//footer
 	const footerEl = document.createElement("footer");
 	//content-inner
@@ -151,9 +151,12 @@ export default footerComponent = function () {
 	const renderFooterComponent = () => {
 		divElInner.appendChild(renderFooterContent());
 		footerEl.appendChild(divElInner);
-		bodyContent.appendChild(footerEl);
+		// bodyContent.appendChild(footerEl);
+		return footerEl;
 	};
 
+	// return { renderFooterComponent };
 	return renderFooterComponent();
-	return { renderFooterComponent };
-};
+}
+
+export { footerComponent };

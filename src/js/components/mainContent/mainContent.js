@@ -1,5 +1,5 @@
 //main content Homepage module
-export default mainComponent = function () {
+function mainComponent() {
 	//main
 	const mainEl = document.createElement("main");
 	mainEl.classList.add("content-container");
@@ -83,9 +83,12 @@ export default mainComponent = function () {
 			renderAboutContent()
 		);
 		mainEl.appendChild(divElInner);
-		bodyContent.appendChild(mainEl);
+		// bodyContent.appendChild(mainEl);
+		return mainEl;
 	};
 
-	return renderMainComponent();
 	// return { renderMainComponent };
-};
+	return renderMainComponent();
+}
+
+export { mainComponent };

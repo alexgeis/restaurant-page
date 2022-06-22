@@ -1,5 +1,6 @@
+import rrLogo from "../../../assets/rr-logo.png";
 //header module
-export default headerComponent = function () {
+function headerComponent() {
 	//header
 	const headerEl = document.createElement("header");
 	headerEl.classList.add("header");
@@ -91,9 +92,12 @@ export default headerComponent = function () {
 	const renderHeader = () => {
 		divElInner.append(renderLeftHead(), renderCenterHead(), renderRightHead());
 		headerEl.appendChild(divElInner);
-		bodyContent.appendChild(headerEl);
+		// bodyContent.appendChild(headerEl);
+		return headerEl;
 	};
 
-	return renderHeader();
 	// return { renderHeader };
-};
+	return renderHeader();
+}
+
+export { headerComponent };
