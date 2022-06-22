@@ -338,28 +338,28 @@ const footerComponent = (() => {
 			option4Question
 		);
 		questionDivEl.append(questionLabel, questionSelect);
-
-		divEl;
-		formEl.append(h1El, pEl, divEl);
-		//hero scroll appending
-		svgScrollEl.appendChild(pathScrollEl);
-		aEl.append(div3El, svgScrollEl);
-		div2El.appendChild(aEl);
+		//append form sections to form element
+		divEl.append(
+			formReqTextEl,
+			emptyDivEl,
+			firstNameDivEl,
+			emailDivEl,
+			birthdayDivEl,
+			phoneDivEl,
+			genderDivEl,
+			questionDivEl
+		);
 		//full component appending
-		sectionEl.append(divEl, div2El);
-		return sectionEl;
+		formEl.append(h1El, pEl, divEl);
+		return formEl;
 	};
 
 	const renderFooterComponent = () => {
-		divElInner.append(
-			renderHeroContent(),
-			renderMenuContent(),
-			renderAboutContent()
-		);
-		mainEl.appendChild(divElInner);
-		bodyContent.appendChild(mainEl);
+		divElInner.appendChild(renderFooterContent());
+		footerEl.appendChild(divElInner);
+		bodyContent.appendChild(footerEl);
 	};
 
 	return { renderFooterComponent };
 })();
-// mainComponent.renderMainComponent();
+footerComponent.renderFooterComponent();
