@@ -13,3 +13,9 @@ const footer = footerComponent();
 window.onload = () => {
 	bodyContent.append(header, mainContent, footer);
 };
+
+const ghpages = require("gh-pages");
+
+ghpages.publish("dist", function (err) {
+	console.error(err);
+});
