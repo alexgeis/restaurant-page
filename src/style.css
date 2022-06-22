@@ -83,6 +83,34 @@ transform: translateX(-50%);
 text-align: center;
 }
 
+
+section#menu.parallax {
+    /* The image used */
+    background-image: url("./assets/coffee.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section#about.parallax {
+    /* The image used */
+    background-image: url("./assets/pie.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* Double R Diner 
 Paddy's Irish Pub
 
