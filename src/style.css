@@ -18,7 +18,7 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.site-container {
+#content {
     border: 15px solid #000;
 }
 .header {
