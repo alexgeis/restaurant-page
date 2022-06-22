@@ -1,6 +1,7 @@
 import html from "./demo.html";
 import "./style.css";
 import print from "./otherFunction.js";
+import rrLogo from "./assets/rr-logo.png";
 
 function component() {
 	const element = document.createElement("div");
@@ -16,8 +17,10 @@ const bodyContent = document.querySelector("#content");
 const headerComponent = (() => {
 	//header
 	const headerEl = document.createElement("header");
+	headerEl.classList.add("header");
 	//header-inner
 	const divElInner = document.createElement("div");
+	divElInner.classList.add("header-inner");
 
 	const renderLeftHead = () => {
 		const divEl = document.createElement("div");
@@ -44,6 +47,10 @@ const headerComponent = (() => {
 		a3El.setAttribute("id", "header-nav3");
 		a3El.setAttribute("href", "#");
 		a3El.textContent = "Nav Link 3";
+
+		navEl.append(aEl, a2El, a3El);
+		divEl.append(navEl);
+		return divEl;
 	};
 	const renderCenterHead = () => {
 		const divEl = document.createElement("div");
@@ -55,8 +62,13 @@ const headerComponent = (() => {
 		aEl.setAttribute("href", "#");
 
 		const imgEl = document.createElement("img");
-		imgEl.setAttribute("src", "./assets/rr-logo.png");
+		imgEl.setAttribute("src", rrLogo);
+		// imgEl.setAttribute("src", "assets/rr-logo.png");
 		imgEl.setAttribute("alt", "Double R Diner Logo");
+
+		aEl.appendChild(imgEl);
+		divEl.append(aEl);
+		return divEl;
 	};
 	const renderRightHead = () => {
 		const divEl = document.createElement("div");
@@ -83,11 +95,19 @@ const headerComponent = (() => {
 		a6El.setAttribute("id", "header-nav6");
 		a6El.setAttribute("href", "#");
 		a6El.textContent = "Nav Link 6";
+
+		navEl.append(a4El, a5El, a6El);
+		divEl.append(navEl);
+		return divEl;
 	};
 
 	const renderHeader = () => {
-		header.append();
+		divElInner.append(renderLeftHead(), renderCenterHead(), renderRightHead());
+		headerEl.append(divElInner);
+		bodyContent.appendChild(headerEl);
 	};
 
 	return { renderHeader };
 })();
+
+headerComponent.renderHeader();
