@@ -28,6 +28,7 @@ body {
 }
 .header-inner {
     display: flex;
+    gap: 8px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -35,6 +36,8 @@ body {
 }
 .header-nav {
     padding: 1px 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
 #headerLeft{
     display: flex;
@@ -50,6 +53,9 @@ body {
     display: flex;
     text-align: right;
     justify-content: flex-end;
+}
+.header-nav > a {
+    padding-right: 10px;
 }
 
 
