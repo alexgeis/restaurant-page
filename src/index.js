@@ -10,4 +10,4 @@ function component() {
 	return element;
 }
 const bodyContent = document.querySelector("#content");
-bodyContent.appendChild(component());
+// bodyContent.appendChild(component());
