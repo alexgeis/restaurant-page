@@ -31,7 +31,7 @@
     <a href="https://github.com/alexgeis/restaurant-page"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <!-- <a id="deployed_link" href="https://github.com/alexgeis/restaurant-page">View Demo</a> -->
+    <a id="deployed_link" href="https://alexgeis.github.io/restaurant-page/">View Demo</a>
     ·
     <a href="https://github.com/alexgeis/restaurant-page/issues">Report Bug</a>
     ·
@@ -70,15 +70,13 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-<a href="https://example.com">
+<a href="https://alexgeis.github.io/restaurant-page/">
 <p align="center">
 <img id="product-screenshot" src="./src/assets/restaurant-homepage.png" alt="Product Name Screen Shot"
 style="display: block;
     margin-left: auto;
     margin-right: auto;
     width: 60%;"/></p></a>
-
-Search and replace keywords: `deployed_link`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -206,6 +204,7 @@ Project Link: [https://github.com/alexgeis/restaurant-page](https://github.com/a
 
 Helpful resources and kudos.
 
+- [gh-pages - npm package](https://www.npmjs.com/package/gh-pages)
 - [MDN Docs on JavaScript Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)
 - [Choose an Open Source License](https://choosealicense.com)
 - [Img Shields](https://shields.io)
