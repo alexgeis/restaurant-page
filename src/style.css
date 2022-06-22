@@ -58,21 +58,23 @@ body {
     padding-right: 10px;
 }
 
-
-#hero {
+.content-section {
     display: flex;
-    justify-content: center;align-items: center;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     position: relative;
+}
+
+#hero {
     background-color: blanchedalmond;
     padding: 40px 3% 60px;
     min-height: calc(70vh - 179px);
 }
 #hero-content {
-    text-align: center;
-    font-size: 3rem;
-    max-width: 80%;
-    padding-bottom: 10px;
+    color:black;
+    text-decoration: none;
+    text-shadow: none;
 }
 #hero-scroll {
     position: absolute;
@@ -83,6 +85,23 @@ transform: translateX(-50%);
 text-align: center;
 }
 
+.main-content {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+    text-decoration: underline;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.main-content:hover {
+    color:red;
+}
 
 section#menu.parallax {
     /* The image used */
@@ -97,6 +116,7 @@ section#menu.parallax {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 section#about.parallax {
     /* The image used */
     background-image: url("./assets/pie.jpg");
