@@ -11,3 +11,18 @@ function component() {
 }
 const bodyContent = document.querySelector("#content");
 // bodyContent.appendChild(component());
+
+//header Homepage module
+const headerComponent = (() => {
+	const header = document.createElement("header");
+
+	const renderLeftHead = () => {};
+	const renderCenterHead = () => {};
+	const renderRightHead = () => {};
+
+	const renderHeader = () => {
+		header.append();
+	};
+
+	return { renderHeader };
+})();
