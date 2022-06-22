@@ -164,53 +164,31 @@ const mainComponent = (() => {
 	};
 
 	const renderMenuContent = () => {
+		const sectionEl = document.createElement("section");
+		sectionEl.classList.add("content-section", "parallax");
+		sectionEl.setAttribute("id", "menu");
+
 		const divEl = document.createElement("div");
-		divEl.classList.add("header-center");
-		divEl.setAttribute("id", "headerCenter");
+		divEl.classList.add("main-content");
+		divEl.setAttribute("id", "menu-text");
+		divEl.textContent = "MENU";
 
-		const aEl = document.createElement("a");
-		aEl.classList.add("header-nav-item");
-		aEl.setAttribute("href", "#");
-
-		const imgEl = document.createElement("img");
-		imgEl.setAttribute("src", rrLogo);
-		// imgEl.setAttribute("src", "assets/rr-logo.png");
-		imgEl.setAttribute("alt", "Double R Diner Logo");
-
-		aEl.appendChild(imgEl);
-		divEl.append(aEl);
-		return divEl;
+		sectionEl.appendChild(divEl);
+		return sectionEl;
 	};
 
 	const renderAboutContent = () => {
+		const sectionEl = document.createElement("section");
+		sectionEl.classList.add("content-section", "parallax");
+		sectionEl.setAttribute("id", "about");
+
 		const divEl = document.createElement("div");
-		divEl.classList.add("header-right");
-		divEl.setAttribute("id", "headerRight");
+		divEl.classList.add("main-content");
+		divEl.setAttribute("id", "about-text");
+		divEl.textContent = "ABOUT";
 
-		const navEl = document.createElement("nav");
-		navEl.classList.add("header-nav");
-
-		const a4El = document.createElement("a");
-		a4El.classList.add("header-nav-item");
-		a4El.setAttribute("id", "header-nav4");
-		a4El.setAttribute("href", "#");
-		a4El.textContent = "Nav Link 4";
-
-		const a5El = document.createElement("a");
-		a5El.classList.add("header-nav-item");
-		a5El.setAttribute("id", "header-nav5");
-		a5El.setAttribute("href", "#");
-		a5El.textContent = "Nav Link 5";
-
-		const a6El = document.createElement("a");
-		a6El.classList.add("header-nav-item");
-		a6El.setAttribute("id", "header-nav6");
-		a6El.setAttribute("href", "#");
-		a6El.textContent = "Nav Link 6";
-
-		navEl.append(a4El, a5El, a6El);
-		divEl.append(navEl);
-		return divEl;
+		sectionEl.appendChild(divEl);
+		return sectionEl;
 	};
 
 	const renderMainComponent = () => {
