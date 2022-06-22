@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap');
 
-:root {
-    --primary-color: #CC0C0C;
-}
+$font-stack: 'Nunito Sans', sans-serif;
+$primary-color: firebrick;
+$primary-dark: #000;
+$primary-light: #FAF9F6;
+$secondary-light: rgb(168, 168, 168);
+
 
 html {
     scroll-behavior: smooth;
-  }
+}
 *,
 *::after,
 *::before {
@@ -14,25 +17,24 @@ html {
     margin: 0;
     box-sizing: border-box;
 }
-/* body styling */
 body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: $font-stack;
 }
+
 #content {
-    border: 15px solid #000;
+    border: 15px solid $primary-dark;
 }
-/* header styling */
 .header {
-    background: #fff;
+    background: $primary-light;
     /* opacity: 1;
     transition: opacity 200ms 600ms ease-out; */
 }
 .header-inner {
     display: flex;
-    gap: 8px;
     justify-content:  space-between;
     align-items: center;
     text-align: center;
+    gap: 8px;
     padding: 60px 0;
 }
 .header-nav {
@@ -40,19 +42,20 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
-#headerLeft{
+@mixin headerAlign($align: left) {
     display: flex;
-    text-align: left;
+    text-align: $align;
+}
+#headerLeft{
+    @include headerAlign;
     justify-content: flex-start;
 }
 #headerCenter{
-    display: flex;
-    text-align: center;
+    @include headerAlign($align: center);
     justify-content: center;
 }
 #headerRight{
-    display: flex;
-    text-align: right;
+    @include headerAlign($align: right);
     justify-content: flex-end;
 }
 .header-nav > a {
@@ -108,9 +111,9 @@ div#header-nav1:hover #header-nav3 {
     position: absolute;
     bottom: 15px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    text-align: center;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%);
+text-align: center;
 }
 #scroll-link {
     text-decoration: none;
@@ -136,13 +139,9 @@ div#header-nav1:hover #header-nav3 {
     -webkit-transition: all 0.5s;
 }
 .main-content:hover {
-    color:firebrick;
+    color:$primary-color;
 }
-
-section#menu.parallax {
-    /* The image used */
-    background-image: url("./assets/coffee.jpg");
-  
+%parallax-shared {
     /* Set a specific height */
     min-height: 500px; 
   
@@ -152,8 +151,14 @@ section#menu.parallax {
     background-repeat: no-repeat;
     background-size: cover;
 }
+section#menu.parallax {
+    @extend %parallax-shared;
+    /* The image used */
+    background-image: url("./assets/coffee.jpg");
+}
 
 section#about.parallax {
+    @extend %parallax-shared;
     /* The image used */
     background-image: url("./assets/pie.jpg");
   
@@ -168,8 +173,8 @@ section#about.parallax {
 }
 
 footer {
-    background-color: #000;
-    color: white;
+    background-color: $primary-dark;
+    color: $primary-light;
     padding: 60px 0;
 }
 .footer-inner {
@@ -183,7 +188,7 @@ footer {
 }
 #form-sub-header {
     text-align: center;
-    color: rgb(168, 168, 168);
+    color: $secondary-light;
 }
 .form-grid {
     display: grid;
