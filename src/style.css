@@ -56,6 +56,28 @@ body {
 }
 .header-nav > a {
     padding-right: 10px;
+    text-decoration: none;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.header-nav > a:link {
+    color: #000;
+}
+.header-nav > a:visited {
+    color: rgb(56, 40, 40);
+}
+/* .header-nav > a:hover ~ #header-nav{
+    color: #4f4f4f;
+} */
+/* 
+div#header-nav1:hover #header-nav2,
+div#header-nav1:hover #header-nav3 {
+    color: #4f4f4f;
+    color: white;
+} */
+
+.header-nav > a:active {
+    font-size: 0.95rem;
 }
 
 .content-section {
@@ -131,7 +153,41 @@ section#about.parallax {
     background-size: cover;
 }
 
-/* Double R Diner 
-Paddy's Irish Pub
+footer {
+    background-color: #000;
+    color: white;
+    padding: 60px 0;
+}
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#form-header {
+    text-align: center;
+}
+#form-sub-header {
+    text-align: center;
+    color: rgb(168, 168, 168);
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    padding-bottom: 30px;
+}
+#form-req-text {
+    align-self: center;
+}
 
-*/
+.form-grid-unit {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.form-grid div > input,
+.form-grid div > select {
+    width: 200px;
+    line-height: 1.5rem;
+}

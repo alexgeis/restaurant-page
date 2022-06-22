@@ -12,9 +12,9 @@
 			<div class="header-inner">
 				<div class="header-left" id="headerLeft">
 					<nav class="header-nav">
-						<a href="#" class="header-nav-item">Navigation Link 1</a
-						><a href="#" class="header-nav-item">Navigation Link 2</a
-						><a href="#" class="header-nav-item">Navigation Link 3</a>
+						<a href="#" id="header-nav1" class="header-nav-item">Nav Link 1</a
+						><a href="#" id="header-nav2" class="header-nav-item">Nav Link 2</a
+						><a href="#" id="header-nav3" class="header-nav-item">Nav Link 3</a>
 					</nav>
 				</div>
 				<div class="header-center" id="headerCenter">
@@ -24,9 +24,9 @@
 				</div>
 				<div class="header-right" id="headerRight">
 					<nav class="header-nav">
-						<a href="#" class="header-nav-item">Navigation Link 1</a
-						><a href="#" class="header-nav-item">Navigation Link 2</a
-						><a href="#" class="header-nav-item">Navigation Link 3</a>
+						<a href="#" id="header-nav4" class="header-nav-item">Nav Link 4</a
+						><a href="#" id="header-nav5" class="header-nav-item">Nav Link 5</a
+						><a href="#" id="header-nav6" class="header-nav-item">Nav Link 6</a>
 					</nav>
 				</div>
 			</div>
@@ -65,31 +65,31 @@
 		<footer>
 			<div class="footer-inner">
 				<form action="">
-					<h1>SIGN UP FOR NEWSLETTER</h1>
-					<p>
-						Our monthly newsletter with allt he latest news, recipes, playlists,
+					<h1 id="form-header">SIGN UP FOR NEWSLETTER</h1>
+					<p id="form-sub-header">
+						Our monthly newsletter with all the latest news, recipes, playlists,
 						and offers.
 					</p>
 					<div class="form-grid">
-						<div>*Please fill out these fields</div>
+						<div id="form-req-text">*Please fill out these fields</div>
 						<div></div>
-						<div>
+						<div class="form-grid-unit">
 							<label for="firstName">First Name *</label>
 							<input type="text" name="firstName" id="firstName" />
 						</div>
-						<div>
+						<div class="form-grid-unit">
 							<label for="email">Email *</label>
 							<input type="email" name="email" id="email" />
 						</div>
-						<div>
+						<div class="form-grid-unit">
 							<label for="dateOfBirth">Date of birth *</label>
 							<input type="date" name="dateOfBirth" id="dateOfBirth" />
 						</div>
-						<div>
+						<div class="form-grid-unit">
 							<label for="phone">Mobile</label>
 							<input type="number" name="phone" id="phone" />
 						</div>
-						<div>
+						<div class="form-grid-unit">
 							<label for="gender">Gender</label>
 							<select name="gender" id="gender-select">
 								<option value="">--Please choose--</option>
@@ -98,8 +98,8 @@
 								<option value="noInput">Prefer not to say</option>
 							</select>
 						</div>
-						<div>
-							<label for="favoriteDish">What is your favorite menu item?</label>
+						<div class="form-grid-unit">
+							<label for="favoriteDish">Favorite menu item?</label>
 							<select name="favoriteDish" id="dish-select">
 								<option value="">--Please choose--</option>
 								<option value="coffee">Coffee</option>
