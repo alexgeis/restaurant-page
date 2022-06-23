@@ -7,7 +7,6 @@ $primary-dark: #000;
 $primary-light: #FAF9F6;
 $secondary-light: rgb(168, 168, 168);
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -59,18 +58,23 @@ body {
     @include headerAlign($align: right);
     justify-content: flex-end;
 }
-.header-nav > a {
-    font-size: .9rem;
-    padding-right: 10px;
-    text-decoration: none;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-.header-nav > a:link {
-    color: #000;
-}
-.header-nav > a:visited {
-    color: rgb(56, 40, 40);
+.header-nav {
+	>a {
+		font-size: .9rem;
+		padding-right: 10px;
+		text-decoration: none;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		&:link {
+			color: #000;
+		}
+		&:visited {
+			color: rgb(56, 40, 40);
+		}
+		&:active {
+			font-size: 0.95rem;
+		}
+	}
 }
 /* .header-nav > a:hover ~ #header-nav{
     color: #4f4f4f;
@@ -81,10 +85,6 @@ div#header-nav1:hover #header-nav3 {
     color: #4f4f4f;
     color: white;
 } */
-
-.header-nav > a:active {
-    font-size: 0.95rem;
-}
 
 #header-logo {
     width: 100px;
@@ -117,35 +117,34 @@ transform: translateX(-50%);
 text-align: center;
 }
 #scroll-link {
-    text-decoration: none;
-}
-#scroll-link:link {
-    color: black;
-}
-#scroll-link:visited {
-    color: black;
+	text-decoration: none;
+	&:link {
+		color: black;
+	}
+	&:visited {
+		color: black;
+	}
 }
 #scroll-arrow {
     width:24px;
     height:24px;
 }
 .main-content {
-    font-size: 3rem;
-    color: white;
-    text-align: center;
-    max-width: 80%;
-    margin: 0 auto;
-    padding-bottom: 10px;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
-    text-decoration: underline;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+	font-size: 3rem;
+	color: white;
+	text-align: center;
+	max-width: 80%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+	text-decoration: underline;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	&:hover {
+		color: $primary-color;
+	}
 }
-.main-content:hover {
-    color:$primary-color;
-}
+
 %parallax-shared {
     /* Set a specific height */
     min-height: 500px; 
@@ -166,15 +165,6 @@ section#about.parallax {
     @extend %parallax-shared;
     /* The image used */
     background-image: url("./assets/pie.jpg");
-  
-    /* Set a specific height */
-    min-height: 500px; 
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 footer {
