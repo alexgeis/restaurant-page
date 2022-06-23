@@ -121,6 +121,10 @@ div#header-nav1:hover #header-nav3 {
 #scroll-link:visited {
     color: black;
 }
+#scroll-arrow {
+    width:24px;
+    height:24px;
+}
 .main-content {
     font-size: 3rem;
     color: white;

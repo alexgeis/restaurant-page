@@ -26,22 +26,28 @@ function mainComponent() {
 
 		const div3El = document.createElement("div");
 		div3El.textContent = "SCROLL";
+		//SVG SCROLL ARROW
+		// const svgScrollEl = document.createElement("svg");
+		// svgScrollEl.setAttribute("width", "24");
+		// svgScrollEl.setAttribute("height", "24");
+		// svgScrollEl.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+		// svgScrollEl.setAttribute("fill-rule", "evenodd");
+		// svgScrollEl.setAttribute("clip-rule", "evenodd");
+		// const pathScrollEl = document.createElement("path");
+		// pathScrollEl.setAttribute(
+		// 	"d",
+		// 	"M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"
+		// );
+		// IMG SCROLL ARROW
+		const scrollImgEl = document.createElement("img");
+		scrollImgEl.setAttribute("id", "scroll-arrow");
+		scrollImgEl.setAttribute("src", "./assets/arrow-down.png");
+		scrollImgEl.setAttribute("alt", "down arrow");
 
-		const svgScrollEl = document.createElement("svg");
-		svgScrollEl.setAttribute("width", "24");
-		svgScrollEl.setAttribute("height", "24");
-		svgScrollEl.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-		svgScrollEl.setAttribute("fill-rule", "evenodd");
-		svgScrollEl.setAttribute("clip-rule", "evenodd");
-
-		const pathScrollEl = document.createElement("path");
-		pathScrollEl.setAttribute(
-			"d",
-			"M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"
-		);
 		//hero scroll appending
-		svgScrollEl.appendChild(pathScrollEl);
-		aEl.append(div3El, svgScrollEl);
+		// svgScrollEl.appendChild(pathScrollEl);
+		// aEl.append(div3El, svgScrollEl);
+		aEl.append(div3El, scrollImgEl);
 		div2El.appendChild(aEl);
 		//full component appending
 		sectionEl.append(divEl, div2El);
