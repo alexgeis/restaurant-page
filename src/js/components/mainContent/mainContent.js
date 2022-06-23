@@ -1,3 +1,5 @@
+import downCarot from "../../../assets/down-carot.png";
+
 //main content Homepage module
 function mainComponent() {
 	//main
@@ -41,12 +43,14 @@ function mainComponent() {
 		// IMG SCROLL ARROW
 		const scrollImgEl = document.createElement("img");
 		scrollImgEl.setAttribute("id", "scroll-arrow");
-		scrollImgEl.setAttribute("src", "./assets/arrow-down.png");
+		scrollImgEl.setAttribute("src", downCarot);
 		scrollImgEl.setAttribute("alt", "down arrow");
 
 		//hero scroll appending
+		// SVG VERSION
 		// svgScrollEl.appendChild(pathScrollEl);
 		// aEl.append(div3El, svgScrollEl);
+
 		aEl.append(div3El, scrollImgEl);
 		div2El.appendChild(aEl);
 		//full component appending
