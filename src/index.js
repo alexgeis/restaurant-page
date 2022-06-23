@@ -1,5 +1,6 @@
 import html from "./demo.html";
-import "./style.css";
+// import "./style.css";
+import "./styleSCSS.scss";
 import { headerComponent } from "./js/components/header/header";
 import { mainComponent } from "./js/components/mainContent/mainContent";
 import { footerComponent } from "./js/components/footer/footer";

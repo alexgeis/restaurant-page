@@ -17,6 +17,13 @@ module.exports = {
 		path: path.resolve(__dirname, "dist"),
 		clean: true,
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: "Restaurant",
+			template: "src/demo.html",
+		}),
+		new MiniCssExtractPlugin(),
+	],
 	module: {
 		rules: [
 			{
@@ -24,21 +31,31 @@ module.exports = {
 				loader: "html-loader",
 			},
 			{
+				test: /\.css$/i,
+				use: ["style-loader", "css-loader"],
+			},
+			{
 				test: /\.(s(a|c)ss)$/,
+				// use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
 				type: "asset/resource",
 			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				type: "asset/resource",
+			},
 		],
 	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			title: "Restaurant",
-			template: "src/demo.html",
-		}),
-	],
+	resolve: {
+		extensions: ["*", ".js", ".jsx"],
+		fallback: {
+			fs: false,
+			child_process: false,
+		},
+	},
 	optimization: {
 		runtimeChunk: "single",
 	},
