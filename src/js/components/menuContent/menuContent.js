@@ -1,4 +1,5 @@
 import burgerFries from "../../../assets/burger-fries.jpg";
+import downCarot from "../../../assets/down-carot.png";
 
 //main content Homepage module
 function menuComponent() {
@@ -12,12 +13,12 @@ function menuComponent() {
 	const renderHeroContent = () => {
 		const sectionEl = document.createElement("section");
 		sectionEl.classList.add("content-section");
-		sectionEl.setAttribute("id", "hero");
+		sectionEl.setAttribute("id", "hero-menu");
 
 		const divEl = document.createElement("div");
 		divEl.classList.add("main-content");
 		divEl.setAttribute("id", "hero-content");
-		divEl.textContent = "Finest diner in twin peaks";
+		divEl.textContent = "Keeping 'em coming back for more";
 
 		const div2El = document.createElement("div");
 		div2El.setAttribute("id", "hero-scroll");
@@ -27,6 +28,7 @@ function menuComponent() {
 		aEl.setAttribute("href", "#menu");
 
 		const div3El = document.createElement("div");
+		div3El.setAttribute("style", "color:white;");
 		div3El.textContent = "SCROLL";
 		//SVG SCROLL ARROW
 		// const svgScrollEl = document.createElement("svg");
@@ -42,6 +44,7 @@ function menuComponent() {
 		// );
 		// IMG SCROLL ARROW
 		const scrollImgEl = document.createElement("img");
+		scrollImgEl.setAttribute("style", "color:white;");
 		scrollImgEl.setAttribute("id", "scroll-arrow");
 		scrollImgEl.setAttribute("src", downCarot);
 		scrollImgEl.setAttribute("alt", "down arrow");
