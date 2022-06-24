@@ -1,7 +1,7 @@
 import burgerFries from "../../../assets/burger-fries.jpg";
 import downCarot from "../../../assets/down-carot.png";
 
-//main content Homepage module
+//menu content module
 function menuComponent() {
 	//main
 	const mainEl = document.createElement("main");
@@ -131,44 +131,57 @@ function menuComponent() {
 			return sandwichUlEl;
 		};
 
+		const dinnerH4El = document.createElement("h4");
+		dinnerH4El.textContent = "Dinner";
+		const renderDinnerContent = () => {
+			const dinnerUlEl = document.createElement("ul");
+			const dinnerLiEl1 = document.createElement("li");
+			dinnerLiEl1.textContent = "B.B.Q. Ribs - $10.95";
+			const dinnerLiEl2 = document.createElement("li");
+			dinnerLiEl2.textContent = "Corned Beef - $8.95";
+			const dinnerLiEl3 = document.createElement("li");
+			dinnerLiEl3.textContent = "Steak 'T' Bone - $12.95";
+			const dinnerLiEl4 = document.createElement("li");
+			dinnerLiEl4.textContent = "Beef Stew - $8.49";
+			const dinnerLiEl5 = document.createElement("li");
+			dinnerLiEl5.textContent = "Chicken Fried Steak - $10.50";
+			const dinnerLiEl6 = document.createElement("li");
+			dinnerLiEl6.textContent = "Spaghetti with Meat Sauce - $7.95";
+			const dinnerLiEl7 = document.createElement("li");
+			dinnerLiEl7.textContent = "Catch O' the Day - Market Price";
+
+			dinnerUlEl.append(
+				dinnerLiEl1,
+				dinnerLiEl2,
+				dinnerLiEl3,
+				dinnerLiEl4,
+				dinnerLiEl5,
+				dinnerLiEl6,
+				dinnerLiEl7
+			);
+			return dinnerUlEl;
+		};
+
 		foodMenu.append(
 			breakfastH4El,
 			renderBreakfastContent(),
 			sandwichH4El,
-			renderSandwichContent()
+			renderSandwichContent(),
+			dinnerH4El,
+			renderDinnerContent()
 		);
 		mainContentEl.append(foodHeaderEl, foodMenu);
 		sectionEl.appendChild(mainContentEl);
 		return sectionEl;
 	};
 
-	const renderAboutContent = () => {
-		const sectionEl = document.createElement("section");
-		sectionEl.classList.add("content-section", "parallax");
-		sectionEl.setAttribute("id", "about");
-
-		const divEl = document.createElement("div");
-		divEl.classList.add("main-content");
-		divEl.setAttribute("id", "about-text");
-		divEl.textContent = "ABOUT";
-
-		sectionEl.appendChild(divEl);
-		return sectionEl;
-	};
-
-	const renderMainComponent = () => {
-		divElInner.append(
-			renderHeroContent(),
-			renderMenuContent(),
-			renderAboutContent()
-		);
+	const renderMenuComponent = () => {
+		divElInner.append(renderHeroContent(), renderFoodContent());
 		mainEl.appendChild(divElInner);
-		// bodyContent.appendChild(mainEl);
 		return mainEl;
 	};
 
-	// return { renderMainComponent };
-	return renderMainComponent();
+	return renderMenuComponent();
 }
 
 export { menuComponent };
