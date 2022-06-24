@@ -44,15 +44,9 @@ function menuComponent() {
 		// );
 		// IMG SCROLL ARROW
 		const scrollImgEl = document.createElement("img");
-		scrollImgEl.setAttribute("style", "color:white;");
 		scrollImgEl.setAttribute("id", "scroll-arrow");
 		scrollImgEl.setAttribute("src", downCarot);
 		scrollImgEl.setAttribute("alt", "down arrow");
-
-		//hero scroll appending
-		// SVG VERSION
-		// svgScrollEl.appendChild(pathScrollEl);
-		// aEl.append(div3El, svgScrollEl);
 
 		aEl.append(div3El, scrollImgEl);
 		div2El.appendChild(aEl);
@@ -61,17 +55,24 @@ function menuComponent() {
 		return sectionEl;
 	};
 
-	const renderMenuContent = () => {
+	const renderFoodContent = () => {
 		const sectionEl = document.createElement("section");
-		sectionEl.classList.add("content-section", "parallax");
-		sectionEl.setAttribute("id", "menu");
+		sectionEl.classList.add("content-section");
+		sectionEl.setAttribute("id", "food");
 
-		const divEl = document.createElement("div");
-		divEl.classList.add("main-content");
-		divEl.setAttribute("id", "menu-text");
-		divEl.textContent = "MENU";
+		const mainContent = document.createElement("div");
+		mainContent.classList.add("main-content");
 
-		sectionEl.appendChild(divEl);
+		const foodHeader = document.createElement("div");
+		foodHeader.setAttribute("id", "food-header");
+		foodHeader.textContent = "FOOD";
+		const foodMenu = document.createElement("div");
+		foodHeader.setAttribute("id", "food-menu");
+		foodHeader.textContent = "FOOD";
+
+		foodMenu.append();
+		mainContent.append(foodHeader, foodMenu);
+		sectionEl.appendChild(mainContent);
 		return sectionEl;
 	};
 
