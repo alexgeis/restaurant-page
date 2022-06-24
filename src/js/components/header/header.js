@@ -71,21 +71,22 @@ function headerComponent() {
 		a4El.classList.add("header-nav-item");
 		a4El.setAttribute("id", "header-nav4");
 		a4El.setAttribute("href", "#");
-		a4El.textContent = "Nav Link 4";
+		a4El.textContent = "About the Diner";
 
-		const a5El = document.createElement("a");
-		a5El.classList.add("header-nav-item");
-		a5El.setAttribute("id", "header-nav5");
-		a5El.setAttribute("href", "#");
-		a5El.textContent = "Nav Link 5";
+		// const a5El = document.createElement("a");
+		// a5El.classList.add("header-nav-item");
+		// a5El.setAttribute("id", "header-nav5");
+		// a5El.setAttribute("href", "#");
+		// a5El.textContent = "Nav Link 5";
 
-		const a6El = document.createElement("a");
-		a6El.classList.add("header-nav-item");
-		a6El.setAttribute("id", "header-nav6");
-		a6El.setAttribute("href", "#");
-		a6El.textContent = "Nav Link 6";
+		// const a6El = document.createElement("a");
+		// a6El.classList.add("header-nav-item");
+		// a6El.setAttribute("id", "header-nav6");
+		// a6El.setAttribute("href", "#");
+		// a6El.textContent = "Nav Link 6";
+		// navEl.append(a4El, a5El, a6El);
 
-		navEl.append(a4El, a5El, a6El);
+		navEl.append(a4El);
 		divEl.appendChild(navEl);
 		return divEl;
 	};

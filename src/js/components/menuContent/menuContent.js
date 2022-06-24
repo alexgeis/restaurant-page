@@ -17,7 +17,7 @@ function menuComponent() {
 
 		const divEl = document.createElement("div");
 		divEl.classList.add("main-content");
-		divEl.setAttribute("id", "hero-content");
+		divEl.setAttribute("id", "hero-menu-content");
 		divEl.textContent = "Keeping 'em coming back for more";
 
 		const div2El = document.createElement("div");
@@ -25,7 +25,7 @@ function menuComponent() {
 
 		const aEl = document.createElement("a");
 		aEl.setAttribute("id", "scroll-link");
-		aEl.setAttribute("href", "#menu");
+		aEl.setAttribute("href", "#food");
 
 		const div3El = document.createElement("div");
 		div3El.setAttribute("style", "color:white;");

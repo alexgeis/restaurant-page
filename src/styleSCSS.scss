@@ -38,7 +38,7 @@ body {
     padding: 60px 0;
 }
 .header-nav {
-    padding: 1px 15px;
+    padding: 1px 40px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -117,11 +117,19 @@ div#header-nav1:hover #header-nav3 {
     @extend %parallax-menu-hero;
     background-image: url('./assets/burger-fries.jpg');
 }
-#hero-content {
-    color:black;
+%hero-content-section {
     text-decoration: none;
     text-shadow: none;
     text-transform: uppercase;
+}
+#hero-content {
+    @extend %hero-content-section;
+    color:black;
+}
+#hero-menu-content {
+    @extend %hero-content-section;
+    color:white;
+    text-shadow: 1px 1px #000;
 }
 #hero-scroll {
     position: absolute;
