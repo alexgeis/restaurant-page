@@ -61,7 +61,7 @@ function menuComponent() {
 		sectionEl.setAttribute("id", "food");
 
 		const mainContentEl = document.createElement("div");
-		mainContentEl.classList.add("main-content");
+		mainContentEl.classList.add("menu-main-content");
 
 		const foodHeaderEl = document.createElement("div");
 		foodHeaderEl.setAttribute("id", "food-header");
