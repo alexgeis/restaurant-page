@@ -20,21 +20,22 @@ function headerComponent() {
 		aEl.classList.add("header-nav-item");
 		aEl.setAttribute("id", "header-nav1");
 		aEl.setAttribute("href", "#");
-		aEl.textContent = "Nav Link 1";
+		aEl.textContent = "Food";
 
-		const a2El = document.createElement("a");
-		a2El.classList.add("header-nav-item");
-		a2El.setAttribute("id", "header-nav2");
-		a2El.setAttribute("href", "#");
-		a2El.textContent = "Nav Link 2";
+		// const a2El = document.createElement("a");
+		// a2El.classList.add("header-nav-item");
+		// a2El.setAttribute("id", "header-nav2");
+		// a2El.setAttribute("href", "#");
+		// a2El.textContent = "Nav Link 2";
 
-		const a3El = document.createElement("a");
-		a3El.classList.add("header-nav-item");
-		a3El.setAttribute("id", "header-nav3");
-		a3El.setAttribute("href", "#");
-		a3El.textContent = "Nav Link 3";
+		// const a3El = document.createElement("a");
+		// a3El.classList.add("header-nav-item");
+		// a3El.setAttribute("id", "header-nav3");
+		// a3El.setAttribute("href", "#");
+		// a3El.textContent = "Nav Link 3";
+		// navEl.append(aEl, a2El, a3El);
 
-		navEl.append(aEl, a2El, a3El);
+		navEl.append(aEl);
 		divEl.append(navEl);
 		return divEl;
 	};
