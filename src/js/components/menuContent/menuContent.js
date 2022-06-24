@@ -60,19 +60,28 @@ function menuComponent() {
 		sectionEl.classList.add("content-section");
 		sectionEl.setAttribute("id", "food");
 
-		const mainContent = document.createElement("div");
-		mainContent.classList.add("main-content");
+		const mainContentEl = document.createElement("div");
+		mainContentEl.classList.add("main-content");
 
-		const foodHeader = document.createElement("div");
-		foodHeader.setAttribute("id", "food-header");
-		foodHeader.textContent = "FOOD";
+		const foodHeaderEl = document.createElement("div");
+		foodHeaderEl.setAttribute("id", "food-header");
+		foodHeaderEl.textContent = "FOOD";
 		const foodMenu = document.createElement("div");
-		foodHeader.setAttribute("id", "food-menu");
-		foodHeader.textContent = "FOOD";
+		foodMenu.setAttribute("id", "food-menu");
+
+		const breakfastH4El = document.createElement("h4");
+		const breakfastUlEl = document.createElement("ul");
+		const breakfastLiEl1 = document.createElement("li");
+		const breakfastLiEl2 = document.createElement("li");
+		const breakfastLiEl3 = document.createElement("li");
+		const breakfastLiEl4 = document.createElement("li");
+		const breakfastLiEl5 = document.createElement("li");
+		const breakfastLiEl6 = document.createElement("li");
+		const breakfastLiEl7 = document.createElement("li");
 
 		foodMenu.append();
-		mainContent.append(foodHeader, foodMenu);
-		sectionEl.appendChild(mainContent);
+		mainContentEl.append(foodHeaderEl, foodMenu);
+		sectionEl.appendChild(mainContentEl);
 		return sectionEl;
 	};
 
