@@ -99,7 +99,44 @@ function menuComponent() {
 			);
 			return breakfastUlEl;
 		};
-		foodMenu.append(breakfastH4El, renderBreakfastContent());
+
+		const sandwichH4El = document.createElement("h4");
+		sandwichH4El.textContent = "Sandwiches";
+		const renderSandwichContent = () => {
+			const sandwichUlEl = document.createElement("ul");
+			const sandwichLiEl1 = document.createElement("li");
+			sandwichLiEl1.textContent = "Quarter Pound Hamburger - $7.85";
+			const sandwichLiEl2 = document.createElement("li");
+			sandwichLiEl2.textContent = "Barkburger Special - $7.95";
+			const sandwichLiEl3 = document.createElement("li");
+			sandwichLiEl3.textContent = "Turkey Club - $8.49";
+			const sandwichLiEl4 = document.createElement("li");
+			sandwichLiEl4.textContent = "Roast Beef - $8.10";
+			const sandwichLiEl5 = document.createElement("li");
+			sandwichLiEl5.textContent = "Ham and Cheese - $5.95";
+			const sandwichLiEl6 = document.createElement("li");
+			sandwichLiEl6.textContent = "B. L. T. - $6.75";
+			const sandwichLiEl7 = document.createElement("li");
+			sandwichLiEl7.textContent = "The Redwood - $8.00";
+
+			sandwichUlEl.append(
+				sandwichLiEl1,
+				sandwichLiEl2,
+				sandwichLiEl3,
+				sandwichLiEl4,
+				sandwichLiEl5,
+				sandwichLiEl6,
+				sandwichLiEl7
+			);
+			return sandwichUlEl;
+		};
+
+		foodMenu.append(
+			breakfastH4El,
+			renderBreakfastContent(),
+			sandwichH4El,
+			renderSandwichContent()
+		);
 		mainContentEl.append(foodHeaderEl, foodMenu);
 		sectionEl.appendChild(mainContentEl);
 		return sectionEl;
