@@ -16,21 +16,22 @@ const menu = menuComponent();
 
 window.onload = () => {
 	renderHomePage();
-	// bodyContent.append(header, mainContent, footer);
+	//render menu page on click
+	const headerNav1 = document.querySelector("#headerLeft");
+	console.log(headerNav1);
+	headerNav1.addEventListener("click", renderMenuPage);
+	function renderMenuPage() {
+		bodyContent.innerHTML = "";
+		bodyContent.append(header, menu, footer);
+	}
+	//render home page on logo click
+	const headerLogo = document.querySelector("#header-logo");
+	headerLogo.addEventListener("click", renderHomePage);
+	function renderHomePage() {
+		bodyContent.innerHTML = "";
+		bodyContent.append(header, mainContent, footer);
+	}
 };
-
-//render menu page on click
-const headerNav1 = document.querySelector("#header-nav1");
-headerNav1.addEventListener("click", renderMenuPage);
-function renderMenuPage() {
-	bodyContent.append(header, menu, footer);
-}
-//render home page on logo click
-const headerLogo = document.querySelector("#header-logo");
-headerLogo.addEventListener("click", renderHomePage);
-function renderHomePage() {
-	bodyContent.append(header, mainContent, footer);
-}
 
 const ghpages = require("gh-pages");
 
