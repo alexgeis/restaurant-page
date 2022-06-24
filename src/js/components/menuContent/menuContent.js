@@ -70,16 +70,33 @@ function menuComponent() {
 		foodMenu.setAttribute("id", "food-menu");
 
 		const breakfastH4El = document.createElement("h4");
+		breakfastH4El.textContent = "Breakfast";
 		const breakfastUlEl = document.createElement("ul");
 		const breakfastLiEl1 = document.createElement("li");
+		breakfastLiEl1.textContent = "2 Eggs, Any Style - $4.00";
 		const breakfastLiEl2 = document.createElement("li");
+		breakfastLiEl2.textContent = "The 'Double' R - $7.00";
 		const breakfastLiEl3 = document.createElement("li");
+		breakfastLiEl3.textContent = "Omelette with Cheese - $5.25";
 		const breakfastLiEl4 = document.createElement("li");
+		breakfastLiEl4.textContent = "French Toast - $6.50";
 		const breakfastLiEl5 = document.createElement("li");
+		breakfastLiEl5.textContent = "Pancakes or Waddles - $5.75";
 		const breakfastLiEl6 = document.createElement("li");
+		breakfastLiEl6.textContent = "Lumberjack Pancake Steak - $6.25";
 		const breakfastLiEl7 = document.createElement("li");
+		breakfastLiEl7.textContent = "Steak and Eggs - $9.95";
 
-		foodMenu.append();
+		breakfastUlEl.append(
+			breakfastLiEl1,
+			breakfastLiEl2,
+			breakfastLiEl3,
+			breakfastLiEl4,
+			breakfastLiEl5,
+			breakfastLiEl6,
+			breakfastLiEl7
+		);
+		foodMenu.append(breakfastH4El, breakfastUlEl);
 		mainContentEl.append(foodHeaderEl, foodMenu);
 		sectionEl.appendChild(mainContentEl);
 		return sectionEl;
