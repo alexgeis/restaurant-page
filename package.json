@@ -1,7 +1,7 @@
 {
   "name": "restaurant-page",
   "version": "1.0.0",
-  "description": "<div id=\"top\"></div>",
+  "description": "Double R Diner website",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
