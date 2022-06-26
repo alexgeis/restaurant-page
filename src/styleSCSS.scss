@@ -117,6 +117,10 @@ div#header-nav1:hover #header-nav3 {
     @extend %parallax-menu-hero;
     background-image: url('./assets/burger-fries.jpg');
 }
+#hero-about {
+    @extend %parallax-menu-hero;
+    background-image: url('./assets/coffee.jpg');
+}
 %hero-content-section {
     text-decoration: none;
     text-shadow: none;

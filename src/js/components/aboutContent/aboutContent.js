@@ -1,7 +1,7 @@
-import burgerFries from "../../../assets/burger-fries.jpg";
+import coffee from "../../../assets/coffee.jpg";
 import downCarot from "../../../assets/down-carot.png";
 
-//menu content module
+//about content module
 function aboutComponent() {
 	//main
 	const mainEl = document.createElement("main");
@@ -13,11 +13,11 @@ function aboutComponent() {
 	const renderHeroContent = () => {
 		const sectionEl = document.createElement("section");
 		sectionEl.classList.add("content-section");
-		sectionEl.setAttribute("id", "hero-menu");
+		sectionEl.setAttribute("id", "hero-about");
 
 		const divEl = document.createElement("div");
 		divEl.classList.add("main-content");
-		divEl.setAttribute("id", "hero-menu-content");
+		divEl.setAttribute("id", "hero-about-content");
 		divEl.textContent = "Keeping 'em coming back for more";
 
 		const div2El = document.createElement("div");
