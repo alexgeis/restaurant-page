@@ -245,7 +245,8 @@ footer {
     //     //dummy content
 	// }
 }
-#food {
+#food,
+#about {
     padding: 30px 0;
 }
 
@@ -262,4 +263,10 @@ footer {
 
 #food-menu > * {
     padding-bottom: 10px;
+}
+
+#about-content {
+    font-size: 1.2rem;
+    max-width: 70%;
+    margin: 0 auto;
 }
